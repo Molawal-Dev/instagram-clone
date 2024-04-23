@@ -69,7 +69,7 @@
   }
   
   .right-sidebar{
-    @media screen and (max-width: 1250px) {
+    @media screen and (max-width: 1280px) {
       display: none;
     }
   }
@@ -130,3 +130,7 @@
     transition: background 0.3s;
   }
 
+  .explore-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }

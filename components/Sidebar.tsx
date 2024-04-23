@@ -12,11 +12,12 @@ const Sidebar = () => {
   const [showNotifications, setShowNotifications] = useState(false);
   const [moreModal, setMoreModal] = useState(false);
   const [createModal, setCreateModal] = useState(false)
+  const [searchModal, setSearchModal] = useState(false)
 
   return (
-    <section className='fixed left-0 top-0 bottom-0 flex h-screen flex-col justify-between bg-dark-2 px-1 text-white  border-r-2 border-gray-600 left-sidebar py-6 z-20'>
+    <section className='fixed left-0 top-0 bottom-0 flex h-screen flex-col justify-between bg-dark-2 pl-2 pr-2 text-white  border-r-2 border-gray-600 left-sidebar py-6 z-20'>
 
-      <div className='mb-5 flex items-center justify-start max-lg:justify-center'>
+      <div className='mb-5 flex items-center justify-start max-lg:justify-center pl-1'>
         <Link
           href='/root/home'
         >
@@ -48,14 +49,23 @@ const Sidebar = () => {
             title='Home'
           />
         </div>
-        <div>
-          <SidebarLinks
-            href=''
-            source='/icons/search.svg'
+
+        {/* Search */}
+        <div className='flex gap-4 items-center p-3 rounded-lg justify-start w-full max-lg:justify-center min-w-7 hover:bg-gray-700 lg:mr-20 cursor-pointer max-lg:mr-4' 
+        onClick={() => setSearchModal(!searchModal)}
+        >
+          <Image
+            src='/icons/search.svg'
             alt='Search'
-            title='Search'
+            width={24}
+            height={24}
+            className='svg fill-current'
           />
+          <p className="text-lg font-semibold max-lg:hidden">
+            Search
+          </p>
         </div>
+
         <div>
           <SidebarLinks
             href='/root/home/explore'
@@ -141,6 +151,46 @@ const Sidebar = () => {
         </p>
       </div>
 
+      {/* Search modal............................*/}
+      {
+        searchModal && (
+          <section className=' bg-dark-2 flex flex-col fixed w-[380px] left-16 top-0 bottom-0 lg:left-14'>
+
+            <div className='border-b border-gray-700 pb-6 p-5'>
+              <h1 className=' font-bold text-lg text-white mb-8 ml-1'>Search</h1>
+
+              <div className=' bg-gray-600 rounded-md flex justify-between items-center py-2 px-3'>
+                <input 
+                  type="text" 
+                  placeholder='Search'
+                  className=' bg-transparent border-0 outline-none'
+                />
+
+                <div className='bg-white rounded-full px-[2px] py-[1px] cursor-pointer'>
+                  <Image
+                    src='/icons/xmark-solid.svg'
+                    alt='cancel'
+                    height={9}
+                    width={9}
+                    className='h-3'
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className='flex flex-col h-full'>
+              <p className='font-semibold text-xs text-white ml-6 mt-4'>Recent</p>
+
+              <div className='flex justify-center items-center h-full'>
+                <p className='font-semibold text-xs text-gray-500'>No recent searches</p>
+              </div>
+            </div>
+            
+
+          </section>
+        )
+      }
+
       {/* more modal */}
       {
         moreModal && (
@@ -148,7 +198,7 @@ const Sidebar = () => {
         )
       }
 
-      {/* Create modal */}
+      {/* Create modal.............. */}
       {
         createModal && (
           <div className='absolute bg-black w-screen h-screen top-0 flex items-center justify-center bg-opacity-70 text-sm'>
@@ -171,19 +221,43 @@ const Sidebar = () => {
               </div>
             </div>
       
-            <div className='absolute top-3 bg-white rounded-full flex items-center justify-center p-1 h-7 right-10 cursor-pointer'
+            <div className='absolute top-3 bg-white rounded-full flex items-center justify-center py-1 px-[6px] h-7 right-10 cursor-pointer'
             onClick={() => setCreateModal(false)}
             >
               <Image
                 src='/icons/xmark-solid.svg'
                 alt='cancel'
-                height={20}
-                width={20}
+                height={15}
+                width={15}
+                className=''
               />
             </div>
           </div>
         )
       }
+
+      {/* Notifications modal */}
+      {
+        showNotifications && (
+          <section className=' bg-dark-2 overflow-y-scroll flex flex-col fixed w-[380px] left-16 top-0 bottom-0 p-5 lg:left-14'>
+            <h1 className=' font-bold text-lg text-white'>Notifications</h1>
+
+            <div className='text-center text-gray-400 flex justify-center flex-col p-4 gap-4 mt-12 mb-6 text-sm'>
+              <p>Activity on Your Posts</p>
+              <p className=' leading-5'>When someone likes or comment on one of your posts, youll see it here.</p>
+            </div>
+
+            <p>Suggested for you</p>
+
+            <div className='flex-col flex'>
+              <NotificationSugg/>
+            </div>
+
+          </section>
+        )
+      }
+
+      
     </section>
   )
 }

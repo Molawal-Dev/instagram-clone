@@ -7,7 +7,6 @@ import StatusGallery from '@/components/StatusGallery'
 import Image from 'next/image'
 import PostCard from '@/components/PostCard'
 import SmallHeader from '@/components/SmallHeader'
-import NotificationSugg from '@/components/NotificationSugg'
 
 const page = () => {
 
@@ -23,11 +22,11 @@ const page = () => {
 
 
   return (
-    <section className='flex gap-10'>
+    <section className='flex gap-20 ml-3'>
       <div className='flex-col flex-1 justify-center marginTop-down'>
         <SmallHeader />
         
-
+        {/* Status Gallery....................... */}
         <div className='flex items-center justify-center relative py-3 w-[600px] z-0'>
           <div className='flex items-center overflow-x-scroll no-scrollbar gap-3 stat-transition scroll-smooth sliderDiv'>
             {
@@ -65,14 +64,14 @@ const page = () => {
           </div>
         </div>
 
-        {/* ......................................... */}
+        {/* Posts........................... */}
         <section className='flex flex-col items-center'>
           <PostCard />
         </section>
       </div>
 
       {/* Right sidebar................... */}
-      <div className='flex flex-col h-screen items-start bg-dark-2 text-white w-[350px] right-sidebar mt-2' >
+      <div className='flex flex-col h-screen items-start bg-dark-2 text-white w-[280px] right-sidebar mt-2' >
 
           <Suggestions 
             name='mohlawal'
@@ -102,8 +101,8 @@ const page = () => {
         </div>
 
         <div className='flex flex-col text-gray-500 text-xs gap-4 w-full mt-8'>
-          <p>About.Help.Press.API.Jobs.Privacy.Terms.Locations.Language.Meta Verified</p>
-          
+          <p className='leading-5'>About.Help.Press.API.Jobs.Privacy.Terms.<br/>Locations.Language.Meta Verified</p>
+          <p></p>
           <p>&copy; 2024 INSTAGRAM FROM META</p>
         </div>
       </div>

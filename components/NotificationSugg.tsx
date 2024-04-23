@@ -27,10 +27,10 @@ const NotificationSuggCard = ({name, imgUrl, action, status, blueTick, fullname 
           <p className="font-bold text-sm flex gap-1">
             {name} {blueTick && (
                 <Image 
-                    src='/icons/checked.svg'
-                    alt="bluetick"
-                    height={25}
-                    width={25}
+                  src='/icons/checked.svg'
+                  alt="bluetick"
+                  height={12}
+                  width={12}
                 />
             )}
           </p>
@@ -40,9 +40,9 @@ const NotificationSuggCard = ({name, imgUrl, action, status, blueTick, fullname 
         </div>
       </div>
 
-      <div className='bg-blue-500 px-5 py-2 rounded-lg'>
+      <button className='bg-blue-500 px-5 py-2 rounded-lg'>
         <p className=" text-white text-xs">{action}</p>
-      </div>
+      </button>
     </div>
   )
 }

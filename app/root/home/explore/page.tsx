@@ -1,10 +1,12 @@
+import Image from 'next/image'
 import React from 'react'
+
 
 const ExplorePage = () => {
   return (
-    <div className='font-bold text-6xl text-white'>
-      Explore page
-    </div>
+    <section>
+      <div className='text-5xl text-white font-extrabold'>Explore page</div>
+    </section>
   )
 }
 
