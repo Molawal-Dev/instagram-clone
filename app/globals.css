@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+      --primary-foreground: 222.2 47.4% 11.2%;
+
+      --secondary: 217.2 32.6% 17.5%;
+      --secondary-foreground: 210 40% 98%;
+
+      --muted: 217.2 32.6% 17.5%;
+      --muted-foreground: 215 20.2% 65.1%;
+
+      --accent: 217.2 32.6% 17.5%;
+      --accent-foreground: 210 40% 98%;
+
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 210 40% 98%;
+
+      --input: 217.2 32.6% 17.5%;
+      --ring: 212.7 26.8% 83.9%;
+    }
+  }
+
+  .auth-bg{
+    background: linear-gradient(115deg, #f9ce34, #ee2a7b, #6228d7);
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar{
+    display: none;
+  }
+
+  .sliderImagesDiv {
+    background-image: linear-gradient(115deg, #f9ce34, #ee2a7b, #6228d7);
+  }
+
+  .insta-logo-res{
+    @media screen and (max-width: 700px) {
+      display: none;
+    }
+  }
+  
+  .sb-links-res{
+    @media screen and (max-width: 700px) {
+      gap: 30px;
+    }
+  }
+  
+  .right-sidebar{
+    @media screen and (max-width: 1250px) {
+      display: none;
+    }
+  }
+
+  .left-sidebar, .hide {
+    @media screen and (max-width: 700px) {
+      display: none;
+    }
+  }
+
+  .marginTop-down{
+    @media screen and (max-width: 700px) {
+      margin-top: 70px;
+    }
+  }
+
+  .sidebar-small{
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 30px;
+    border-top: 2px gray;
+  }
+
+  .show {
+    @media screen and (max-width: 700px) {
+      display: flex;
+    }
+  }
+
+  .section-margin {
+    @media screen and (min-width: 700px) {
+      margin-left: 74px;
+    }
+    @media screen and (min-width: 1025px) {
+      margin-left: 258px;
+    }
+  }
+
+  .left-container{ 
+    @media screen and (max-width: 1200px) {
+      max-width: 300px;
+    }
+    @media screen and (max-width: 900px) {
+      max-width: 110px;
+    }
+  }
+
+  .hide{
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
+  }
+
+  .transitioning{
+    transition: background 0.3s;
+  }
+
