@@ -303,4 +303,8 @@ export const reels = [
     description: 'mi amor',
     more: false,
   },
+<<<<<<< HEAD
 ]
+=======
+]
+>>>>>>> f6741a2087749abfe30345daf17d581a93391fcb

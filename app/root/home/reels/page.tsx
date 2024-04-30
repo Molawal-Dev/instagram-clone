@@ -16,8 +16,13 @@ interface reelCardProps {
 
 const Card = ({name, profilePic, bigImage, likes, more, comments, description, otherPic }: reelCardProps) => {
   return (
+<<<<<<< HEAD
     <div className='flex gap-5 h-[600px]'>
       <div className='relative'>
+=======
+    <div className='flex gap-5'>
+      <div className='relative h-screen'>
+>>>>>>> f6741a2087749abfe30345daf17d581a93391fcb
         <Image
           src={bigImage}
           alt='reels'
@@ -50,7 +55,11 @@ const Card = ({name, profilePic, bigImage, likes, more, comments, description, o
 
             <p className='text-white text-sm font-bold'>{name} <span className=' font-extrabold'>&middot;</span></p>
 
+<<<<<<< HEAD
             <button className='text-white text-sm font-bold border-2 border-gray-800 rounded-xl p-1 px-2 border-opacity-50 shadow-sm shadow-black'>
+=======
+            <button className='text-white text-sm font-bold border-2 border-gray-800 rounded-xl p-1 px-2 border-opacity-50'>
+>>>>>>> f6741a2087749abfe30345daf17d581a93391fcb
               Follow
             </button>
           </div>

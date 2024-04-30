@@ -12,12 +12,20 @@ const Sidebar = () => {
   const [showNotifications, setShowNotifications] = useState(false);
   const [moreModal, setMoreModal] = useState(false);
   const [createModal, setCreateModal] = useState(false)
+<<<<<<< HEAD
   const [searchModal, setSearchModal] = useState(false)
 
   return (
     <section className='fixed left-0 top-0 bottom-0 flex h-screen flex-col justify-between bg-dark-2 pl-2 pr-2 text-white  border-r-2 border-gray-600 left-sidebar py-6 z-20'>
 
       <div className='mb-5 flex items-center justify-start max-lg:justify-center pl-1'>
+=======
+
+  return (
+    <section className='fixed left-0 top-0 bottom-0 flex h-screen flex-col justify-between bg-dark-2 px-1 text-white  border-r-2 border-gray-600 left-sidebar py-6 z-20'>
+
+      <div className='mb-5 flex items-center justify-start max-lg:justify-center'>
+>>>>>>> f6741a2087749abfe30345daf17d581a93391fcb
         <Link
           href='/root/home'
         >
@@ -49,6 +57,7 @@ const Sidebar = () => {
             title='Home'
           />
         </div>
+<<<<<<< HEAD
 
         {/* Search */}
         <div className='flex gap-4 items-center p-3 rounded-lg justify-start w-full max-lg:justify-center min-w-7 hover:bg-gray-700 lg:mr-20 cursor-pointer max-lg:mr-4' 
@@ -66,6 +75,16 @@ const Sidebar = () => {
           </p>
         </div>
 
+=======
+        <div>
+          <SidebarLinks
+            href=''
+            source='/icons/search.svg'
+            alt='Search'
+            title='Search'
+          />
+        </div>
+>>>>>>> f6741a2087749abfe30345daf17d581a93391fcb
         <div>
           <SidebarLinks
             href='/root/home/explore'
@@ -151,6 +170,7 @@ const Sidebar = () => {
         </p>
       </div>
 
+<<<<<<< HEAD
       {/* Search modal............................*/}
       {
         searchModal && (
@@ -191,6 +211,8 @@ const Sidebar = () => {
         )
       }
 
+=======
+>>>>>>> f6741a2087749abfe30345daf17d581a93391fcb
       {/* more modal */}
       {
         moreModal && (
@@ -198,7 +220,11 @@ const Sidebar = () => {
         )
       }
 
+<<<<<<< HEAD
       {/* Create modal.............. */}
+=======
+      {/* Create modal */}
+>>>>>>> f6741a2087749abfe30345daf17d581a93391fcb
       {
         createModal && (
           <div className='absolute bg-black w-screen h-screen top-0 flex items-center justify-center bg-opacity-70 text-sm'>
@@ -221,20 +247,30 @@ const Sidebar = () => {
               </div>
             </div>
       
+<<<<<<< HEAD
             <div className='absolute top-3 bg-white rounded-full flex items-center justify-center py-1 px-[6px] h-7 right-10 cursor-pointer'
+=======
+            <div className='absolute top-3 bg-white rounded-full flex items-center justify-center p-1 h-7 right-10 cursor-pointer'
+>>>>>>> f6741a2087749abfe30345daf17d581a93391fcb
             onClick={() => setCreateModal(false)}
             >
               <Image
                 src='/icons/xmark-solid.svg'
                 alt='cancel'
+<<<<<<< HEAD
                 height={15}
                 width={15}
                 className=''
+=======
+                height={20}
+                width={20}
+>>>>>>> f6741a2087749abfe30345daf17d581a93391fcb
               />
             </div>
           </div>
         )
       }
+<<<<<<< HEAD
 
       {/* Notifications modal */}
       {
@@ -258,6 +294,8 @@ const Sidebar = () => {
       }
 
       
+=======
+>>>>>>> f6741a2087749abfe30345daf17d581a93391fcb
     </section>
   )
 }

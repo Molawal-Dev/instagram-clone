@@ -69,7 +69,11 @@
   }
   
   .right-sidebar{
+<<<<<<< HEAD
     @media screen and (max-width: 1280px) {
+=======
+    @media screen and (max-width: 1250px) {
+>>>>>>> f6741a2087749abfe30345daf17d581a93391fcb
       display: none;
     }
   }
@@ -130,7 +134,10 @@
     transition: background 0.3s;
   }
 
+<<<<<<< HEAD
   .explore-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
+=======
+>>>>>>> f6741a2087749abfe30345daf17d581a93391fcb
