@@ -17,11 +17,7 @@ interface postCardProps {
 
 const Card = ({name, profilePic, bluetick, duration, bigImage, likes, more, comments, description }: postCardProps) => {
   return(
-<<<<<<< HEAD
     <div className='flex flex-col mt-2 border-b-2 border-b-gray-700 gap-3 py-3 max-w-[470px]'>
-=======
-    <div className='flex flex-col mt-2 border-b-2 border-b-gray-700 gap-3 py-3 max-w-[420px]'>
->>>>>>> f6741a2087749abfe30345daf17d581a93391fcb
       <div className='flex justify-between'>
         <div className='flex gap-2 justify-center items-center'>
           <Image
@@ -63,13 +59,8 @@ const Card = ({name, profilePic, bluetick, duration, bigImage, likes, more, comm
         <Image
           src={bigImage}
           alt='image'
-<<<<<<< HEAD
           width={400}
           height={400}
-=======
-          width={390}
-          height={390}
->>>>>>> f6741a2087749abfe30345daf17d581a93391fcb
           className='rounded-md'
         />
       </div>
