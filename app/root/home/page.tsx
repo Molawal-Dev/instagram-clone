@@ -110,7 +110,6 @@ const page = () => {
 
           <p className='leading-5'>About.Help.Press.API.Jobs.Privacy.Terms.<br/>Locations.Language.Meta Verified</p>
 
-          <p>About.Help.Press.API.Jobs.Privacy.Terms.Locations.Language.Meta Verified</p>
           <p>&copy; 2024 INSTAGRAM FROM META</p>
         </div>
       </div>
